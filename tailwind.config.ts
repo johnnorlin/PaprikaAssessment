@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      //defining theme colors for Paprika.
+      colors: {
+        'off-black': '#121212',
+        'salmon-2': '#ff7b7b',
+        'gray': '#4a4a4a',
+        'paprika-salmon': '#ff8574',
+        'white': 'white',
+        'light-gray': '#fafafa',
+        'middle-gray': '#a0a0a0',
+        'white-2': 'white',
+        'black': 'black',
+        'paprika-light': '#ff7b7b',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
