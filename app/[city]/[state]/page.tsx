@@ -3,15 +3,6 @@ import restaurants from "../../../restaurants.json";
 import Image from "next/image";
 import NotFound from "@/components/NotFound";
 
-//Format city/state names to Title Case
-const toTitleCase = (str: string) => {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
-
 //Dynamic metadata generator
 export async function generateMetadata({ params }: any) {
   //format inputs for metadata generation
@@ -25,6 +16,15 @@ export async function generateMetadata({ params }: any) {
     description: `Find the best restaurants in ${formattedCity}, ${formattedState}. Search by dietary preferences like vegan, vegetarian, gluten-free, and more.`,
   };
 }
+
+//Format city/state names to Title Case
+const toTitleCase = (str: string) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
 
 //Find correspnding full state names from input abbreviation
 const getFullStateName = (inputState: string) => {
