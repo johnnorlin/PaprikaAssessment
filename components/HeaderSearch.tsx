@@ -15,11 +15,12 @@ const HeaderSearch: React.FC = () => {
   };
 
   return (
-    <nav className="flex flex-row">
+    <nav className="flex md:grow flex-col self-center">
+      {/* <div className="flex grow flex-col md:flex-row"> */}
       <form
         onSubmit={handleSubmit}
         aria-label="City and state search input"
-        className="flex p-0 md:p-4 h-10 self-center shadow-xl flex-col md:flex-row text-paprika-salmon rounded-xl font-bold gap-2 md:gap-4"
+        className="flex p-2 md:justify-center flex-col md:flex-row border-[#A5AFBE] self-center shadow-xl text-paprika-salmon rounded-xl font-bold gap-0 md:gap-4"
       >
         <div className="self-center flex">
           <div className="self-center flex">
@@ -49,7 +50,7 @@ const HeaderSearch: React.FC = () => {
             onChange={(e) => setCity(e.target.value)}
           />
         </div>
-        <div className="text-[#CCCCCC] self-center invisible md:visible">|</div>
+        <div className="text-[#CCCCCC] self-center hidden md:flex">|</div>
         <div className="self-center flex">
           <svg
             width="29"
@@ -69,35 +70,6 @@ const HeaderSearch: React.FC = () => {
             />
           </svg>
 
-          {/* <div className="self-center relative w-[27.5px] h-[27.5px]">
-            <svg
-              width="20"
-              height="25"
-              viewBox="0 0 20 25"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.4279 24.5312L3.17822 15.9813C3.07749 15.8529 2.9778 15.7238 2.87916 15.5938C1.64079 13.9625 0.971786 11.97 0.974787 9.92188C0.974787 7.41475 1.97074 5.01031 3.74354 3.23751C5.51635 1.4647 7.92079 0.46875 10.4279 0.46875C12.935 0.46875 15.3395 1.4647 17.1123 3.23751C18.8851 5.01031 19.881 7.41475 19.881 9.92188C19.884 11.969 19.2153 13.9606 17.9775 15.5912L17.9767 15.5938C17.9767 15.5938 17.7188 15.9323 17.6802 15.9779L10.4279 24.5312ZM4.25158 14.5582C4.25158 14.5582 4.45182 14.8229 4.49737 14.8796L10.4279 21.8741L16.3662 14.8702C16.404 14.8229 16.6051 14.5565 16.606 14.5556C17.6176 13.2228 18.1643 11.5951 18.1623 9.92188C18.1623 7.87059 17.3474 5.90332 15.8969 4.45285C14.4465 3.00237 12.4792 2.1875 10.4279 2.1875C8.37663 2.1875 6.40936 3.00237 4.95888 4.45285C3.50841 5.90332 2.69354 7.87059 2.69354 9.92188C2.69173 11.5961 3.23905 13.2248 4.25158 14.5582Z"
-                fill="#FF8174"
-              />
-            </svg>
-            <svg
-              width="9"
-              height="10"
-              viewBox="0 0 9 10"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-y-2 z-10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4.42792 9.21875C3.57808 9.21875 2.74732 8.96675 2.0407 8.4946C1.33409 8.02245 0.783345 7.35137 0.458125 6.56622C0.132904 5.78107 0.0478118 4.91711 0.213608 4.0836C0.379404 3.25009 0.788642 2.48446 1.38957 1.88353C1.9905 1.2826 2.75613 0.873361 3.58964 0.707565C4.42315 0.541769 5.28711 0.626862 6.07226 0.952082C6.85742 1.2773 7.5285 1.82804 8.00064 2.53466C8.47279 3.24128 8.7248 4.07204 8.7248 4.92188C8.72343 6.06106 8.27029 7.1532 7.46476 7.95872C6.65924 8.76425 5.5671 9.21739 4.42792 9.21875ZM4.42792 2.34375C3.91802 2.34375 3.41956 2.49496 2.99559 2.77824C2.57162 3.06153 2.24117 3.46418 2.04604 3.93527C1.85091 4.40636 1.79985 4.92474 1.89933 5.42484C1.99881 5.92495 2.24435 6.38433 2.60491 6.74489C2.96547 7.10545 3.42485 7.35099 3.92495 7.45047C4.42506 7.54994 4.94344 7.49889 5.41453 7.30376C5.88562 7.10862 6.28827 6.77818 6.57155 6.35421C6.85484 5.93024 7.00605 5.43178 7.00605 4.92188C7.00536 4.23833 6.73352 3.58297 6.25018 3.09962C5.76683 2.61628 5.11147 2.34443 4.42792 2.34375Z"
-                fill="#FF8174"
-              />
-            </svg>
-          </div> */}
-
           <input
             aria-label="State"
             id="state"
@@ -110,6 +82,7 @@ const HeaderSearch: React.FC = () => {
           />
         </div>
       </form>
+      {/* </div> */}
     </nav>
   );
 };
