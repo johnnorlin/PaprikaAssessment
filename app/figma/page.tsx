@@ -30,9 +30,9 @@ export const metadata: Metadata = {
 const FigmaPage: React.FC = () => {
   const photoCount = "45";
   return (
-    <div className="h-full self-center w-full lg:w-3/4 xl:w-2/3 bg-cover bg-center">
+    <div className="h-full self-center w-full xl:w-3/4 xxl:w-2/3 bg-cover bg-center">
       <div
-        className="h-1/3 flex"
+        className=" flex"
         style={{
           backgroundImage: "url('/Frame 11250.png')",
           backgroundSize: "cover",
@@ -85,7 +85,7 @@ const FigmaPage: React.FC = () => {
               </defs>
             </svg>
           </button>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 mb-10">
             <div className="flex flex-row">
               <button className="m-8 flex items-center justify-center bg-white h-10 w-10 rounded-full">
                 <svg
@@ -153,7 +153,7 @@ const FigmaPage: React.FC = () => {
             <div>
               <svg
                 width="181"
-                height="50"
+                height="45"
                 viewBox="0 0 181 54"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +186,7 @@ const FigmaPage: React.FC = () => {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-                <text fill="#FF8174" x="50" y="35">
+                <text fill="#FF8174" x="50" y="35" fontSize={18}>
                   All ({photoCount}) Photos
                 </text>
                 {/* <path
@@ -198,17 +198,18 @@ const FigmaPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-full grid grid-cols-5 grid-rows-3">
-        <div className="col-span-1 text-md row-span-2 border-r-2 border-[#E8E8E8] flex flex-col font-bold gap-8 p-4 md:p-8">
+      {/* grid grid-cols-5 grid-rows-3 */}
+      <div className="h-full flex-col md:grid md:grid-cols-5 md:grid-rows-3">
+        <div className="w-full md:col-span-1 md:row-span-2 flex flex-row md:flex-col text-md border-r-2 border-[#E8E8E8] font-bold gap-8 p-4 md:p-8">
           <Link href="#best-matches">Best Matches</Link>
           <Link href="#menu">Menu</Link>
           <Link href="#dietary-info">Dietary Info</Link>
           <Link href="#reviews">Reviews</Link>
         </div>
-        <div className="col-span-4 row-span-3 m-8">
-          <div className="w-full border-b-2 border-[#D6D6D6] justify-between flex flex-row pb-8 gap-4">
+        <div className="w-full md:col-span-4 p-8 pr-0">
+          <div className="w-full border-b-2 border-[#D6D6D6] justify-between flex flex-row pb-8">
             <div className="flex flex-col gap-4">
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-2 flex-wrap">
                 <h1 className="font-bold text-3xl">The Daily Grind</h1>
                 <svg
                   width="34"
@@ -239,10 +240,10 @@ const FigmaPage: React.FC = () => {
                   </defs>
                 </svg>
               </div>
-              <div className="flex flex-row text-xl">
+              <div className="flex flex-col md:flex-row text-xl">
                 <div>1.2 miles away</div>
-                <div className="mx-2"> | </div>
-                <div className="text-[#36AA7D] text-2xl font-bold"> Open</div>
+                <div className="mx-2 hidden md:flex"> | </div>
+                <div className="text-[#36AA7D] text-xl font-bold">Open</div>
               </div>
             </div>
             <div className="flex flex-row p-2 gap-4 justify-between self-center h-1/2 border-2 rounded-2xl border-[#E7EAEE]">
@@ -524,9 +525,9 @@ const FigmaPage: React.FC = () => {
               </svg>
             </div>
           </div>
-          <div id="best-matches" className="flex flex-col gap-6 pt-8">
+          <div id="best-matches" className="flex flex-col w-full gap-6 pt-8">
             <h1 className="font-bold text-xl">Best Matches</h1>
-            <div className="flex flex-row gap-6">
+            <div className="flex flex-row flex-wrap gap-6">
               <div className="flex flex-col gap-4">
                 <div className="">
                   <Image
