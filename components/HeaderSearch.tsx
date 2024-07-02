@@ -1,60 +1,59 @@
 "use client";
-import { useState, FormEvent } from "react";
+import { DM_Sans } from "next/font/google";
+const DMSans = DM_Sans({ weight: "100", subsets: ["latin"] });
 
 const HeaderSearch: React.FC = () => {
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (city && state) {
-      let cityParam = city.replace(" ", "-");
-      let stateParam = state.replace(" ", "-");
-      window.location.href = `/${cityParam}/${stateParam}`;
-    }
-  };
-
   return (
-    <nav className="flex md:grow flex-col self-center">
-      {/* <div className="flex grow flex-col md:flex-row"> */}
-      <form
-        onSubmit={handleSubmit}
-        aria-label="City and state search input"
-        className="flex p-2 md:justify-center flex-col md:flex-row border-[#A5AFBE] self-center shadow-xl text-paprika-salmon rounded-xl font-bold gap-0 md:gap-4"
+    <div className="flex">
+      <div
+        className={
+          "flex self-center justify-between flex-col lg:flex-row flex-wrap rounded-xl shadow-xl text-paprika-salmon" +
+          DMSans.className
+        }
       >
-        <div className="self-center flex">
-          <div className="self-center flex">
-            <svg
-              width="20"
-              height="25"
-              viewBox="0 0 24 25"
-              className="self-center"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.277588 10.4504C0.277588 15.9005 4.70288 20.3102 10.153 20.3102C12.2492 20.3102 14.1746 19.6581 15.7739 18.5402L21.5501 24.3319C21.8762 24.6424 22.2799 24.7821 22.6991 24.7821C23.5997 24.7821 24.2519 24.0989 24.2519 23.1983C24.2519 22.7636 24.0809 22.3754 23.817 22.0804L18.0719 16.3197C19.2986 14.6738 20.0128 12.6553 20.0128 10.4504C20.0128 5.0003 15.6031 0.575012 10.153 0.575012C4.70288 0.575012 0.277588 5.0003 0.277588 10.4504ZM2.6688 10.4504C2.6688 6.3046 6.00718 2.96623 10.153 2.96623C14.2832 2.96623 17.6372 6.3046 17.6372 10.4504C17.6372 14.5807 14.2832 17.9346 10.153 17.9346C6.00718 17.9346 2.6688 14.5807 2.6688 10.4504Z"
-                fill="#FF8174"
-              />
-            </svg>
-          </div>
-
+        <div className="flex p-2 gap-2">
+          <svg
+            width="20"
+            height="25"
+            viewBox="0 0 24 25"
+            className="self-center"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.277588 10.4504C0.277588 15.9005 4.70288 20.3102 10.153 20.3102C12.2492 20.3102 14.1746 19.6581 15.7739 18.5402L21.5501 24.3319C21.8762 24.6424 22.2799 24.7821 22.6991 24.7821C23.5997 24.7821 24.2519 24.0989 24.2519 23.1983C24.2519 22.7636 24.0809 22.3754 23.817 22.0804L18.0719 16.3197C19.2986 14.6738 20.0128 12.6553 20.0128 10.4504C20.0128 5.0003 15.6031 0.575012 10.153 0.575012C4.70288 0.575012 0.277588 5.0003 0.277588 10.4504ZM2.6688 10.4504C2.6688 6.3046 6.00718 2.96623 10.153 2.96623C14.2832 2.96623 17.6372 6.3046 17.6372 10.4504C17.6372 14.5807 14.2832 17.9346 10.153 17.9346C6.00718 17.9346 2.6688 14.5807 2.6688 10.4504Z"
+              fill="#FF8174"
+            />
+          </svg>
           <input
             aria-label="Dietary Restrictions"
             id="dietary"
             type="text"
             autoComplete="off"
             placeholder="“Gluten Free Restaurants”"
-            className="self-center placeholder-[#A5AFBE] p-2 border-gray-300 rounded-lg self-end rounded-b-none text-black focus:outline-none focus:border-paprika-light"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
+            className=" placeholder-[#A5AFBE] lg:w-[300px] text-sm text-black"
           />
         </div>
-        <div className="text-[#CCCCCC] self-center hidden md:flex">|</div>
-        <div className="self-center flex">
+        <svg
+          width="2"
+          height="23"
+          viewBox="0 0 2 23"
+          fill="none"
+          className="hidden lg:flex self-center"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="1.17792"
+            y1="2.18557e-08"
+            x2="1.17792"
+            y2="23"
+            stroke="#CCCCCC"
+          />
+        </svg>
+        <div className="flex p-2 gap-2">
           <svg
-            width="29"
-            height="29"
+            width="27.5"
+            height="27.5"
             viewBox="0 0 29 29"
             className="self-center"
             fill="none"
@@ -69,21 +68,17 @@ const HeaderSearch: React.FC = () => {
               fill="#FF8174"
             />
           </svg>
-
           <input
             aria-label="State"
             id="state"
             type="text"
             placeholder="2374 Willow St. Ave"
             autoComplete="off"
-            className="self-center placeholder-[#A5AFBE] p-2 border-gray-300 rounded-lg self-end rounded-b-none text-black focus:outline-none focus:border-paprika-light"
-            value={state}
-            onChange={(e) => setState(e.target.value)}
+            className=" placeholder-[#A5AFBE] lg:w-[150px] text-sm text-black"
           />
         </div>
-      </form>
-      {/* </div> */}
-    </nav>
+      </div>
+    </div>
   );
 };
 

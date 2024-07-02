@@ -6,7 +6,7 @@ import HeaderAccount from "./HeaderAccount";
 //header element with Paprika logo (navigates to home page)
 const Header = () => {
   return (
-    <header className="flex flex-col lg:flex-row w-full xl:w-3/4 xxl:w-2/3 self-center p-6 gap-4">
+    <header className="flex items-center flex-row w-full xl:w-3/4 xxl:w-2/3 self-center p-6 gap-4 justify-between">
       <Link href="/" className="self-center scale-80">
         <svg
           width="171"
@@ -48,13 +48,15 @@ const Header = () => {
             fill="#3F3D56"
           />
         </svg>
-
-        {/* <Image src="/nav_logo.png" alt="nav logo" width={150} height={60} /> */}
       </Link>
-      <div className="flex grow flex-row justify-between gap-2">
+      {/* <div className="flex grow flex-row"> */}
+      <div className="lg:self-center">
         <HeaderSearch />
+      </div>
+      <div className="self-end">
         <HeaderAccount />
       </div>
+      {/* </div> */}
     </header>
   );
 };

@@ -15,15 +15,6 @@ export const metadata: Metadata = {
     title: "Restaurant Finder",
     description:
       "Find the best restaurants in your city and state. Search by dietary preferences like vegan, vegetarian, gluten-free, and more.",
-    // OpenGraph Image placeholder code
-    // images: [
-    //   {
-    //     url: "http://localhost:3000/ogImage.jpg", // Local image URL
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Restaurant Finder",
-    //   },
-    // ],
   },
 };
 
@@ -198,7 +189,6 @@ const FigmaPage: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* grid grid-cols-5 grid-rows-3 */}
       <div className="h-full flex-col md:grid md:grid-cols-5 md:grid-rows-3">
         <div className="w-full md:col-span-1 md:row-span-2 flex flex-row md:flex-col text-md border-r-2 border-[#E8E8E8] font-bold gap-8 p-4 md:p-8">
           <Link href="#best-matches">Best Matches</Link>
@@ -621,6 +611,35 @@ const FigmaPage: React.FC = () => {
                     100% preference match
                   </p>
                   <p className="text-xs">$8.99</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="manu" className="flex flex-col w-full gap-6 pt-8">
+            <h1 className="font-bold text-xl">Appetizers</h1>
+
+            <div className="flex flex-row flex-wrap gap-6">
+              <div className="border-2 flex flex-row gap-2 rounded-xl w-[487px] h-[190px]">
+                <Image
+                  src="/berryparfait.png"
+                  alt="Avocado Toast"
+                  width={100}
+                  height={100}
+                  className="rounded-xl p-2"
+                />
+                <div className="flex flex-col justify-between p-2">
+                  <div className="flex flex-row gap-10 font-bold p-2">
+                    <h3>English Breakfast</h3>
+                    <h3>$ 8.99</h3>
+                  </div>
+                  <p>
+                    Fluffy pancakes, with their golden-brown exteriors and soft,
+                    airy interiors, are a quintessential breakfast delight.
+                    Their deli...
+                  </p>
+                  <div className="p-2 text-[#226CE8] bg-[#EBF2FF] rounded-xl w-1/2">
+                    75% Dietary Match
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 const HeaderAccount: React.FC = () => {
   return (
-    <div className="flex self-center flex-row text-nowrap text-lg md:text-lg">
+    <div className="flex flex-col lg:flex-row text-nowrap text-lg md:text-lg">
       <button
         aria-label="Signup Button"
         type="submit"
@@ -10,7 +10,7 @@ const HeaderAccount: React.FC = () => {
       </button>
       <button
         aria-label="Login Button"
-        className="bg-[#FFE7E7] self-end py-2 px-4 text-paprika-salmon font-semibold rounded-3xl hover:bg-paprika-light hover:text-white transition duration-200"
+        className="bg-[#FFE7E7] self-centerlg:self-end py-2 px-4 text-paprika-salmon font-semibold rounded-3xl hover:bg-paprika-light hover:text-white transition duration-200"
       >
         Log In
       </button>
