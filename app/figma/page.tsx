@@ -615,30 +615,57 @@ const FigmaPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div id="manu" className="flex flex-col w-full gap-6 pt-8">
+          <div id="menu" className="flex flex-col w-full gap-6 pt-8">
             <h1 className="font-bold text-xl">Appetizers</h1>
 
-            <div className="flex flex-row flex-wrap gap-6">
-              <div className="border-2 flex flex-row gap-2 rounded-xl w-[487px] h-[190px]">
+            <div className="flex flex-row flex-wrap justify-between">
+              <div className="border-2 border-[#CDCDCD] flex flex-row rounded-xl gap-2 p-[24px]">
                 <Image
-                  src="/berryparfait.png"
+                  src="/placeholder.png"
                   alt="Avocado Toast"
-                  width={100}
-                  height={100}
-                  className="rounded-xl p-2"
+                  width={135}
+                  height={145}
+                  className="rounded-xl"
                 />
-                <div className="flex flex-col justify-between p-2">
-                  <div className="flex flex-row gap-10 font-bold p-2">
+                <div className="flex flex-col w-[292px] h-[145px] justify-between">
+                  <div className="flex justify-between flex-row font-bold text-md">
                     <h3>English Breakfast</h3>
-                    <h3>$ 8.99</h3>
+                    <h3 className="place-self-end">$ 8.99</h3>
                   </div>
-                  <p>
+                  <p className="text-sm text-[#4F4F4F]">
                     Fluffy pancakes, with their golden-brown exteriors and soft,
                     airy interiors, are a quintessential breakfast delight.
                     Their deli...
                   </p>
-                  <div className="p-2 text-[#226CE8] bg-[#EBF2FF] rounded-xl w-1/2">
-                    75% Dietary Match
+                  <div className="flex flex-row text-[#226CE8] bg-[#EBF2FF] w-[154px] h-[41px] font-bold text-sm rounded-xl">
+                    <div className="flex self-center p-2">
+                      75% Dietary Match
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="border-2 border-[#CDCDCD] flex flex-row rounded-xl gap-2 p-[24px]">
+                <Image
+                  src="/placeholder.png"
+                  alt="Avocado Toast"
+                  width={135}
+                  height={145}
+                  className="rounded-xl"
+                />
+                <div className="flex flex-col w-[292px] h-[145px] justify-between">
+                  <div className="flex justify-between flex-row font-bold text-md">
+                    <h3>English Breakfast</h3>
+                    <h3 className="place-self-end">$ 8.99</h3>
+                  </div>
+                  <p className="text-sm text-[#4F4F4F]">
+                    Fluffy pancakes, with their golden-brown exteriors and soft,
+                    airy interiors, are a quintessential breakfast delight.
+                    Their deli...
+                  </p>
+                  <div className="flex flex-row text-[#226CE8] bg-[#EBF2FF] w-[154px] h-[41px] font-bold text-sm rounded-xl">
+                    <div className="flex self-center p-2">
+                      75% Dietary Match
+                    </div>
                   </div>
                 </div>
               </div>

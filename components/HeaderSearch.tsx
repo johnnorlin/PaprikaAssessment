@@ -11,7 +11,7 @@ const HeaderSearch: React.FC = () => {
           DMSans.className
         }
       >
-        <div className="flex p-2 gap-2">
+        <div className="flex p-2 gap-4">
           <svg
             width="20"
             height="25"
