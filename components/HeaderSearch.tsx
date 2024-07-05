@@ -7,7 +7,7 @@ const HeaderSearch: React.FC = () => {
     <div className="flex">
       <div
         className={
-          "flex self-center justify-between flex-col lg:flex-row flex-wrap rounded-xl shadow-xl text-paprika-salmon" +
+          "flex self-center justify-between flex-col md:flex-row rounded-xl shadow-xl text-paprika-salmon" +
           DMSans.className
         }
       >
