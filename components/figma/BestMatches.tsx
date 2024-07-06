@@ -35,26 +35,27 @@ const BestMatches: React.FC = () => {
     },
     // Add more best matches
   ];
-
   return (
     <div id="best-matches" className="flex flex-col w-full gap-6 pt-8">
       <h1 className="font-bold text-xl">Best Matches</h1>
-      <div className="w-full flex flex-row flex-wrap justify-between gap-6">
+      <div className="flex flex-row gap-8 2xl:justify-between flex-wrap">
         {items.map((item, index) => (
           <div key={index} className="flex flex-col gap-4">
-            <Image
-              src={item.src}
-              alt={item.title}
-              width={180}
-              height={170}
-              className="rounded-xl"
-            />
-            <div className="flex flex-col gap-2 mr-4 ">
-              <h3 className="font-semibold text-md">{item.title}</h3>
-              <p className="text-[#2A9865] text-xs font-extrabold">
-                {item.match}
-              </p>
-              <p className="text-xs">{item.price}</p>
+            <div className="flex-1 flex flex-col">
+              <Image
+                src={item.src}
+                alt={item.title}
+                width={180}
+                height={180}
+                className="rounded-xl"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="font-semibold text-md">{item.title}</h3>
+                <p className="text-[#2A9865] text-xs font-extrabold">
+                  {item.match}
+                </p>
+                <p className="text-xs">{item.price}</p>
+              </div>
             </div>
           </div>
         ))}

@@ -8,7 +8,7 @@ const Menu: React.FC = () => {
       title: "English Breakfast",
       price: "$8.99",
       description:
-        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight.",
+        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight. Their delicate balance of lightness and richness makes every bite a heavenly experience.",
       match: "75% Dietary Match",
     },
     {
@@ -16,7 +16,7 @@ const Menu: React.FC = () => {
       title: "English Breakfast",
       price: "$8.99",
       description:
-        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight.",
+        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight. Their delicate balance of lightness and richness makes every bite a heavenly experience.",
       match: "75% Dietary Match",
     },
     {
@@ -24,7 +24,7 @@ const Menu: React.FC = () => {
       title: "English Breakfast",
       price: "$8.99",
       description:
-        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight.",
+        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight. Their delicate balance of lightness and richness makes every bite a heavenly experience.",
       match: "75% Dietary Match",
     },
     {
@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
       title: "English Breakfast",
       price: "$8.99",
       description:
-        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight.",
+        "Fluffy pancakes, with their golden-brown exteriors and soft, airy interiors, are a quintessential breakfast delight. Their delicate balance of lightness and richness makes every bite a heavenly experience.",
       match: "75% Dietary Match",
     },
     // Add more menu items
@@ -41,7 +41,7 @@ const Menu: React.FC = () => {
   return (
     <div id="menu" className="flex flex-col w-full gap-6 pt-8">
       <h1 className="font-bold text-xl">Appetizers</h1>
-      <div className="flex flex-row flex-wrap justify-between gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-10">
         {items.map((item, index) => (
           <MenuItem key={index} {...item} />
         ))}

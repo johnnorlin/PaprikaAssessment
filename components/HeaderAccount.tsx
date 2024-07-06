@@ -1,6 +1,6 @@
 const HeaderAccount: React.FC = () => {
   return (
-    <div className="flex flex-col lg:flex-row text-nowrap text-lg md:text-lg">
+    <div className="flex flex-row text-nowrap text-lg md:text-lg">
       <button
         aria-label="Signup Button"
         type="submit"

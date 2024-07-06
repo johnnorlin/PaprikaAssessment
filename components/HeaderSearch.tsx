@@ -7,7 +7,7 @@ const HeaderSearch: React.FC = () => {
     <div className="flex">
       <div
         className={
-          "flex self-center justify-between flex-col md:flex-row rounded-xl shadow-xl text-paprika-salmon" +
+          "flex self-center justify-between flex-col sm:flex-row rounded-xl shadow-xl text-paprika-salmon" +
           DMSans.className
         }
       >
@@ -39,7 +39,7 @@ const HeaderSearch: React.FC = () => {
           height="23"
           viewBox="0 0 2 23"
           fill="none"
-          className="hidden lg:flex self-center"
+          className="hidden md:flex self-center"
           xmlns="http://www.w3.org/2000/svg"
         >
           <line

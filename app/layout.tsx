@@ -15,7 +15,7 @@ export default function RootLayout({
       <body className={"w-full flex flex-col bg-light-gray" + inter.className}>
         <Header />
         <main className="flex flex-col grow">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
